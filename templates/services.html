@@ -1,0 +1,235 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="hero" style="padding: 40px 0;">
+    <div class="container">
+        <h1>Our Comprehensive Services</h1>
+        <p>Tailored delivery solutions for every need</p>
+    </div>
+</section>
+
+<!-- Services Grid -->
+<section>
+    <div class="container">
+        <div class="row g-4">
+            {% for service in services %}
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card" style="height: 100%; display: flex; flex-direction: column;">
+                    <div style="font-size: 3rem; margin-bottom: 20px;">{{ service.icon }}</div>
+                    <h5 style="flex-grow: 1;">{{ service.title }}</h5>
+                    <p>{{ service.description }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Service Details -->
+<section class="bg-light">
+    <div class="container">
+        <h2 class="section-title">Service Details</h2>
+
+        <div class="row mb-5">
+            <div class="col-lg-6 mb-4">
+                <img src="{% static 'hero1.jpg' %}" alt="Emergency Relief" class="img-fluid rounded-3">
+            </div>
+            <div class="col-lg-6">
+                <h3 style="margin-bottom: 20px;">Emergency Relief Delivery</h3>
+                <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 15px;">
+                    When disasters strike, every minute counts. Our rapid response team mobilizes emergency supplies
+                    including food,
+                    water, medical kits, and shelter materials to affected communities within hours.
+                </p>
+                <ul style="color: var(--text-light); line-height: 2;">
+                    <li><i class="fas fa-check" style="color: var(--primary-color); margin-right: 10px;"></i>24-hour
+                        emergency response</li>
+                    <li><i class="fas fa-check" style="color: var(--primary-color); margin-right: 10px;"></i>Coordinated
+                        with local authorities</li>
+                    <li><i class="fas fa-check"
+                            style="color: var(--primary-color); margin-right: 10px;"></i>Multi-vehicle convoy support
+                    </li>
+                    <li><i class="fas fa-check" style="color: var(--primary-color); margin-right: 10px;"></i>On-ground
+                        coordination assistance</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-lg-6 order-lg-2 mb-4">
+                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=900&h=600&fit=crop"
+                    alt="Blood Transport" class="img-fluid rounded-3">
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <h3 style="margin-bottom: 20px;">Blood Supply Transportation</h3>
+                <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 15px;">
+                    Specialized temperature-controlled transport for blood products and blood components. Our fleet
+                    maintains precise
+                    temperature ranges to ensure product viability and safety throughout the delivery process.
+                </p>
+                <ul style="color: var(--text-light); line-height: 2;">
+                    <li><i class="fas fa-check" style="color: var(--primary-color); margin-right: 10px;"></i>Temperature
+                        monitoring systems</li>
+                    <li><i class="fas fa-check" style="color: var(--primary-color); margin-right: 10px;"></i>FDA
+                        compliant transport</li>
+                    <li><i class="fas fa-check" style="color: var(--primary-color); margin-right: 10px;"></i>Chain of
+                        custody documentation</li>
+                    <li><i class="fas fa-check" style="color: var(--primary-color); margin-right: 10px;"></i>Trained
+                        transport specialists</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-lg-6 mb-4">
+                <img src="{% static 'hero2.jpg' %}" alt="Medical Equipment" class="img-fluid rounded-3">
+            </div>
+            <div class="col-lg-6">
+                <h3 style="margin-bottom: 20px;">Medical Equipment Delivery</h3>
+                <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 15px;">
+                    Reliable delivery of diagnostic equipment, mobility aids, ventilators, and other medical devices. We
+                    handle
+                    sensitive and high-value equipment with specialized care and insurance coverage.
+                </p>
+                <ul style="color: var(--text-light); line-height: 2;">
+                    <li><i class="fas fa-check" style="color: var(--primary-color); margin-right: 10px;"></i>Specialized
+                        packaging and handling</li>
+                    <li><i class="fas fa-check" style="color: var(--primary-color); margin-right: 10px;"></i>Full
+                        insurance coverage</li>
+                    <li><i class="fas fa-check" style="color: var(--primary-color); margin-right: 10px;"></i>White-glove
+                        delivery service</li>
+                    <li><i class="fas fa-check"
+                            style="color: var(--primary-color); margin-right: 10px;"></i>Installation assistance
+                        available</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-lg-6 order-lg-2 mb-4">
+                <img src="{% static 'hero2.jpg' %}" alt="Express Delivery" class="img-fluid rounded-3">
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <h3 style="margin-bottom: 20px;">Express Delivery Service</h3>
+                <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 15px;">
+                    Same-day and next-day delivery options for urgent shipments. Our express network prioritizes your
+                    shipment
+                    for fastest possible delivery without compromising on safety.
+                </p>
+                <ul style="color: var(--text-light); line-height: 2;">
+                    <li><i class="fas fa-check" style="color: var(--primary-color); margin-right: 10px;"></i>Same-day
+                        delivery in metro areas</li>
+                    <li><i class="fas fa-check" style="color: var(--primary-color); margin-right: 10px;"></i>Next-day
+                        guaranteed service</li>
+                    <li><i class="fas fa-check" style="color: var(--primary-color); margin-right: 10px;"></i>Real-time
+                        GPS tracking</li>
+                    <li><i class="fas fa-check" style="color: var(--primary-color); margin-right: 10px;"></i>Signature
+                        confirmation</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Specialized Services -->
+<section>
+    <div class="container">
+        <h2 class="section-title">Specialized Services</h2>
+        <div class="row g-4 mb-4">
+            <div class="col-md-4">
+                <div
+                    style="background: linear-gradient(135deg, rgba(211, 47, 47, 0.1) 0%, rgba(25, 118, 210, 0.1) 100%); padding: 30px; border-radius: 10px; border-left: 4px solid var(--primary-color);">
+                    <h5 style="margin-bottom: 15px;"><i class="fas fa-dna"
+                            style="color: var(--primary-color); margin-right: 10px;"></i>Biological Sample Transport
+                    </h5>
+                    <p style="color: var(--text-light);">Specialized handling for lab samples, vaccines, and biological
+                        materials with temperature control and secure containment.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div
+                    style="background: linear-gradient(135deg, rgba(211, 47, 47, 0.1) 0%, rgba(25, 118, 210, 0.1) 100%); padding: 30px; border-radius: 10px; border-left: 4px solid var(--primary-color);">
+                    <h5 style="margin-bottom: 15px;"><i class="fas fa-prescription"
+                            style="color: var(--primary-color); margin-right: 10px;"></i>Pharmaceutical Delivery</h5>
+                    <p style="color: var(--text-light);">Secure and compliant delivery of medications and
+                        pharmaceuticals with full chain of custody tracking.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div
+                    style="background: linear-gradient(135deg, rgba(211, 47, 47, 0.1) 0%, rgba(25, 118, 210, 0.1) 100%); padding: 30px; border-radius: 10px; border-left: 4px solid var(--primary-color);">
+                    <h5 style="margin-bottom: 15px;"><i class="fas fa-box"
+                            style="color: var(--primary-color); margin-right: 10px;"></i>Hazmat Transport</h5>
+                    <p style="color: var(--text-light);">Licensed hazmat transportation for regulated materials with
+                        certified drivers and proper containment.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section class="bg-light">
+    <div class="container">
+        <h2 class="section-title">Service Pricing</h2>
+        <div class="row g-4">
+            <div class="col-md-3 mb-4">
+                <div
+                    style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); text-align: center;">
+                    <h5 style="margin-bottom: 10px;">Standard</h5>
+                    <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 20px;">For regular deliveries
+                    </p>
+                    <div style="font-size: 1.5rem; color: var(--primary-color); font-weight: 700; margin-bottom: 20px;">
+                        $50+</div>
+                    <a href="{% url 'app:contact' %}" class="btn btn-primary btn-sm">Inquire</a>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div
+                    style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); text-align: center; border-top: 3px solid var(--primary-color);">
+                    <h5 style="margin-bottom: 10px;">Express</h5>
+                    <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 20px;">Same-day delivery</p>
+                    <div style="font-size: 1.5rem; color: var(--primary-color); font-weight: 700; margin-bottom: 20px;">
+                        $150+</div>
+                    <a href="{% url 'app:contact' %}" class="btn btn-primary btn-sm">Inquire</a>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div
+                    style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); text-align: center;">
+                    <h5 style="margin-bottom: 10px;">Temperature</h5>
+                    <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 20px;">Climate controlled</p>
+                    <div style="font-size: 1.5rem; color: var(--primary-color); font-weight: 700; margin-bottom: 20px;">
+                        $200+</div>
+                    <a href="{% url 'app:contact' %}" class="btn btn-primary btn-sm">Inquire</a>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div
+                    style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); text-align: center;">
+                    <h5 style="margin-bottom: 10px;">Custom</h5>
+                    <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 20px;">Tailored solutions</p>
+                    <div style="font-size: 1.5rem; color: var(--primary-color); font-weight: 700; margin-bottom: 20px;">
+                        TBD</div>
+                    <a href="{% url 'app:contact' %}" class="btn btn-primary btn-sm">Get Quote</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section
+    style="background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); color: white; padding: 60px 0; text-align: center;">
+    <div class="container">
+        <h2 style="margin-bottom: 15px;">Need Custom Service?</h2>
+        <p style="font-size: 1.1rem; margin-bottom: 25px;">Contact our team for tailored delivery solutions</p>
+        <a href="{% url 'app:contact' %}" class="btn btn-light"
+            style="color: var(--primary-color); font-weight: 600;">Get in Touch</a>
+    </div>
+</section>
+
+{% endblock %}

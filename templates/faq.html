@@ -1,0 +1,170 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="hero" style="padding: 40px 0;">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <h1>Frequently Asked Questions</h1>
+                <p>Find answers to common questions about our services</p>
+            </div>
+            <div class="col-lg-5">
+                <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=900&h=600&fit=crop"
+                    alt="Support and delivery FAQ" class="img-fluid rounded-3">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Content -->
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="accordion" id="faqAccordion">
+                    {% for faq in faqs %}
+                    <div class="faq-item accordion-item">
+                        <h2 class="accordion-header" id="heading{{ forloop.counter }}">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse{{ forloop.counter }}" aria-expanded="false"
+                                aria-controls="collapse{{ forloop.counter }}">
+                                <span class="me-3 text-primary"><i class="fas fa-question-circle"></i></span>
+                                {{ faq.question }}
+                            </button>
+                        </h2>
+                        <div id="collapse{{ forloop.counter }}" class="accordion-collapse collapse"
+                            aria-labelledby="heading{{ forloop.counter }}" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                {{ faq.answer }}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Additional Resources -->
+<section class="bg-light">
+    <div class="container">
+        <h2 class="section-title">Additional Resources</h2>
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div
+                    style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); text-align: center;">
+                    <div style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 15px;">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h6 style="margin-bottom: 10px;">User Guide</h6>
+                    <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 15px;">Step-by-step guide to
+                        using our services</p>
+                    <a href="#" style="color: var(--primary-color); font-weight: 600; text-decoration: none;">Download
+                        PDF</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div
+                    style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); text-align: center;">
+                    <div style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 15px;">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h6 style="margin-bottom: 10px;">Video Tutorials</h6>
+                    <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 15px;">Learn through video
+                        demonstrations</p>
+                    <a href="#" style="color: var(--primary-color); font-weight: 600; text-decoration: none;">Watch
+                        Videos</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div
+                    style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); text-align: center;">
+                    <div style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 15px;">
+                        <i class="fas fa-chat"></i>
+                    </div>
+                    <h6 style="margin-bottom: 10px;">Live Chat Support</h6>
+                    <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 15px;">Chat with our support
+                        team</p>
+                    <a href="#" style="color: var(--primary-color); font-weight: 600; text-decoration: none;">Start
+                        Chat</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div
+                    style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); text-align: center;">
+                    <div style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 15px;">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h6 style="margin-bottom: 10px;">Contact Support</h6>
+                    <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 15px;">Reach out to our team
+                        directly</p>
+                    <a href="{% url 'app:contact' %}"
+                        style="color: var(--primary-color); font-weight: 600; text-decoration: none;">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Policies Section -->
+<section>
+    <div class="container">
+        <h2 class="section-title">Important Policies</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div
+                    style="background: linear-gradient(135deg, rgba(211, 47, 47, 0.1) 0%, rgba(25, 118, 210, 0.1) 100%); padding: 30px; border-radius: 10px;">
+                    <h5 style="margin-bottom: 15px;"><i class="fas fa-file-contract"
+                            style="color: var(--primary-color); margin-right: 10px;"></i>Terms of Service</h5>
+                    <p style="color: var(--text-light); margin-bottom: 15px;">Review our terms and conditions for
+                        service usage</p>
+                    <a href="#" style="color: var(--primary-color); font-weight: 600; text-decoration: none;">Read
+                        More</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div
+                    style="background: linear-gradient(135deg, rgba(211, 47, 47, 0.1) 0%, rgba(25, 118, 210, 0.1) 100%); padding: 30px; border-radius: 10px;">
+                    <h5 style="margin-bottom: 15px;"><i class="fas fa-lock"
+                            style="color: var(--primary-color); margin-right: 10px;"></i>Privacy Policy</h5>
+                    <p style="color: var(--text-light); margin-bottom: 15px;">Learn how we protect your personal
+                        information</p>
+                    <a href="#" style="color: var(--primary-color); font-weight: 600; text-decoration: none;">Read
+                        More</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div
+                    style="background: linear-gradient(135deg, rgba(211, 47, 47, 0.1) 0%, rgba(25, 118, 210, 0.1) 100%); padding: 30px; border-radius: 10px;">
+                    <h5 style="margin-bottom: 15px;"><i class="fas fa-shield-alt"
+                            style="color: var(--primary-color); margin-right: 10px;"></i>Insurance Policy</h5>
+                    <p style="color: var(--text-light); margin-bottom: 15px;">Understand our comprehensive coverage</p>
+                    <a href="#" style="color: var(--primary-color); font-weight: 600; text-decoration: none;">Read
+                        More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Still Have Questions? -->
+<section class="bg-light">
+    <div class="container">
+        <div
+            style="background: white; padding: 60px; border-radius: 10px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.08);">
+            <h3 style="margin-bottom: 15px;">Still Have Questions?</h3>
+            <p style="color: var(--text-light); font-size: 1.1rem; margin-bottom: 30px;">
+                Can't find what you're looking for? Our support team is here to help.
+            </p>
+            <div class="d-flex gap-3 justify-content-center flex-wrap">
+                <a href="{% url 'app:contact' %}" class="btn btn-primary btn-lg">Contact Us</a>
+                <a href="tel:+18007332767" class="btn btn-outline-primary btn-lg">Call 1-800-733-2767</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

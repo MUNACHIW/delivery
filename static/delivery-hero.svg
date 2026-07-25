@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <rect width="1200" height="900" fill="#f4f7fb"/>
+  <rect x="50" y="120" width="1100" height="680" rx="36" fill="#ffffff"/>
+  <rect x="110" y="180" width="420" height="280" rx="24" fill="#d32f2f" opacity="0.12"/>
+  <rect x="560" y="200" width="520" height="220" rx="24" fill="#1976d2" opacity="0.12"/>
+  <rect x="140" y="230" width="170" height="80" rx="14" fill="#d32f2f"/>
+  <rect x="330" y="230" width="150" height="80" rx="14" fill="#1976d2"/>
+  <rect x="620" y="250" width="180" height="24" rx="12" fill="#d32f2f"/>
+  <rect x="620" y="290" width="260" height="16" rx="8" fill="#8a8a8a"/>
+  <rect x="620" y="320" width="220" height="16" rx="8" fill="#8a8a8a"/>
+  <rect x="140" y="360" width="340" height="24" rx="12" fill="#1976d2"/>
+  <rect x="140" y="400" width="280" height="24" rx="12" fill="#1976d2" opacity="0.75"/>
+  <rect x="120" y="520" width="960" height="220" rx="24" fill="#f7f9fc"/>
+  <rect x="180" y="570" width="180" height="120" rx="18" fill="#d32f2f" opacity="0.88"/>
+  <rect x="400" y="570" width="180" height="120" rx="18" fill="#1976d2" opacity="0.88"/>
+  <rect x="620" y="570" width="180" height="120" rx="18" fill="#4caf50" opacity="0.88"/>
+  <rect x="840" y="570" width="180" height="120" rx="18" fill="#ff9800" opacity="0.88"/>
+  <circle cx="250" cy="630" r="34" fill="#ffffff" opacity="0.95"/>
+  <circle cx="470" cy="630" r="34" fill="#ffffff" opacity="0.95"/>
+  <circle cx="690" cy="630" r="34" fill="#ffffff" opacity="0.95"/>
+  <circle cx="910" cy="630" r="34" fill="#ffffff" opacity="0.95"/>
+  <path d="M220 650 L260 610 L300 650" stroke="#ffffff" stroke-width="18" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M440 650 L480 610 L520 650" stroke="#ffffff" stroke-width="18" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M660 650 L700 610 L740 650" stroke="#ffffff" stroke-width="18" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M880 650 L920 610 L960 650" stroke="#ffffff" stroke-width="18" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,267 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="hero" style="padding: 40px 0;">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <h1>How It Works</h1>
+                <p>Simple, transparent, and reliable delivery process</p>
+            </div>
+            <div class="col-lg-5">
+                <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?w=900&h=600&fit=crop"
+                    alt="Delivery process overview" class="img-fluid rounded-3">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Steps Section -->
+<section>
+    <div class="container">
+        <div class="row mb-5">
+            {% for step in steps %}
+            <div class="col-lg-6 mb-5">
+                <div style="display: flex; gap: 30px;">
+                    <div style="flex-shrink: 0;">
+                        <div
+                            style="background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); color: white; width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 700;">
+                            {{ step.step }}
+                        </div>
+                    </div>
+                    <div>
+                        <h3 style="margin-bottom: 15px;">{{ step.title }}</h3>
+                        <p style="color: var(--text-light); line-height: 1.6;">{{ step.description }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Detailed Process -->
+<section class="bg-light">
+    <div class="container">
+        <h2 class="section-title">Detailed Process Overview</h2>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div
+                    style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.08);">
+                    <h4 style="margin-bottom: 20px; color: var(--primary-color);"><i class="fas fa-check-circle"></i>
+                        Step 1: Request</h4>
+                    <h6 style="margin-bottom: 10px;">How to Submit Your Request:</h6>
+                    <ul style="color: var(--text-light); line-height: 2; margin-bottom: 0;">
+                        <li>• Visit our website and fill out the delivery form</li>
+                        <li>• Call our 24/7 support team: 1-800-733-2767</li>
+                        <li>• Use our mobile app for quick requests</li>
+                        <li>• Email delivery details to: request@redcrossdelivery.org</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div
+                    style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.08);">
+                    <h4 style="margin-bottom: 20px; color: var(--primary-color);"><i class="fas fa-check-circle"></i>
+                        Step 2: Confirmation</h4>
+                    <h6 style="margin-bottom: 10px;">What Happens After Submission:</h6>
+                    <ul style="color: var(--text-light); line-height: 2; margin-bottom: 0;">
+                        <li>• Our team reviews your delivery requirements</li>
+                        <li>• We verify item compatibility and special handling needs</li>
+                        <li>• We provide a quote and estimated delivery time</li>
+                        <li>• You receive a confirmation number via email/SMS</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div
+                    style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.08);">
+                    <h4 style="margin-bottom: 20px; color: var(--primary-color);"><i class="fas fa-check-circle"></i>
+                        Step 3: Tracking</h4>
+                    <h6 style="margin-bottom: 10px;">How to Monitor Your Delivery:</h6>
+                    <ul style="color: var(--text-light); line-height: 2; margin-bottom: 0;">
+                        <li>• Real-time GPS tracking on our website</li>
+                        <li>• Receive SMS updates at key milestones</li>
+                        <li>• View driver information and ETA</li>
+                        <li>• Contact support with any questions</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div
+                    style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.08);">
+                    <h4 style="margin-bottom: 20px; color: var(--primary-color);"><i class="fas fa-check-circle"></i>
+                        Step 4: Delivery</h4>
+                    <h6 style="margin-bottom: 10px;">Delivery Completion:</h6>
+                    <ul style="color: var(--text-light); line-height: 2; margin-bottom: 0;">
+                        <li>• Professional driver delivers your items</li>
+                        <li>• Signature confirmation collected (if required)</li>
+                        <li>• Receipt and delivery proof provided</li>
+                        <li>• Feedback survey for service improvement</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Timeline Visualization -->
+<section>
+    <div class="container">
+        <h2 class="section-title">Delivery Timeline Example</h2>
+        <div class="row">
+            <div class="col-12">
+                <div
+                    style="background: linear-gradient(90deg, #F5F5F5 0%, #F5F5F5 100%); padding: 40px; border-radius: 10px;">
+                    <div class="row text-center">
+                        <div class="col-md-3 mb-4">
+                            <div style="background: white; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                                <div style="font-size: 1.5rem; margin-bottom: 10px;">📞</div>
+                                <h6>Request Placed</h6>
+                                <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 0;">9:00 AM</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div style="background: white; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                                <div style="font-size: 1.5rem; margin-bottom: 10px;">✓</div>
+                                <h6>Order Confirmed</h6>
+                                <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 0;">9:15 AM</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div style="background: white; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                                <div style="font-size: 1.5rem; margin-bottom: 10px;">📦</div>
+                                <h6>Picked Up</h6>
+                                <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 0;">10:00 AM</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div style="background: white; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                                <div style="font-size: 1.5rem; margin-bottom: 10px;">🚚</div>
+                                <h6>In Transit</h6>
+                                <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 0;">10:15 AM -
+                                    1:30 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row text-center mt-4">
+                        <div class="col-md-6 offset-md-3">
+                            <div
+                                style="background: white; padding: 20px; border-radius: 10px; border: 2px solid var(--primary-color);">
+                                <div style="font-size: 1.5rem; margin-bottom: 10px;">🎉</div>
+                                <h6>Delivered Successfully</h6>
+                                <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 0;">1:45 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Requirements Section -->
+<section class="bg-light">
+    <div class="container">
+        <h2 class="section-title">Delivery Requirements</h2>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <h4 style="margin-bottom: 20px;"><i class="fas fa-list-check" style="color: var(--primary-color);"></i>
+                    Required Information</h4>
+                <div
+                    style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.08);">
+                    <ul style="color: var(--text-light); line-height: 2; margin-bottom: 0;">
+                        <li><strong>Pickup Location:</strong> Full address and contact info</li>
+                        <li><strong>Delivery Location:</strong> Complete destination address</li>
+                        <li><strong>Item Description:</strong> Details and quantity</li>
+                        <li><strong>Special Instructions:</strong> Handling requirements</li>
+                        <li><strong>Contact Number:</strong> For driver communication</li>
+                        <li><strong>Preferred Date/Time:</strong> Delivery window preference</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h4 style="margin-bottom: 20px;"><i class="fas fa-ban" style="color: var(--primary-color);"></i>
+                    Restricted Items</h4>
+                <div
+                    style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.08);">
+                    <p style="color: var(--text-light); margin-bottom: 10px;"><strong>We cannot deliver:</strong></p>
+                    <ul style="color: var(--text-light); line-height: 2; margin-bottom: 0;">
+                        <li>Hazardous materials (without proper licensing)</li>
+                        <li>Explosives or weapons</li>
+                        <li>Perishable food items (non-medical)</li>
+                        <li>Uninsurable high-value items</li>
+                        <li>Live animals</li>
+                        <li>Please contact us for special cases</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Guide -->
+<section>
+    <div class="container">
+        <h2 class="section-title">Pricing Guide</h2>
+        <div class="table-responsive">
+            <table style="width: 100%; border-collapse: collapse; background: white;">
+                <thead>
+                    <tr style="background-color: var(--primary-color); color: white;">
+                        <th style="padding: 15px; text-align: left;">Service Type</th>
+                        <th style="padding: 15px; text-align: left;">Distance</th>
+                        <th style="padding: 15px; text-align: left;">Base Rate</th>
+                        <th style="padding: 15px; text-align: left;">Additional Fees</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom: 1px solid #E0E0E0;">
+                        <td style="padding: 15px;">Standard</td>
+                        <td style="padding: 15px;">0-25 miles</td>
+                        <td style="padding: 15px;">$50</td>
+                        <td style="padding: 15px;">$2/mile after 25mi</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #E0E0E0;">
+                        <td style="padding: 15px;">Express</td>
+                        <td style="padding: 15px;">0-25 miles</td>
+                        <td style="padding: 15px;">$150</td>
+                        <td style="padding: 15px;">$3/mile after 25mi</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #E0E0E0;">
+                        <td style="padding: 15px;">Temperature Controlled</td>
+                        <td style="padding: 15px;">0-25 miles</td>
+                        <td style="padding: 15px;">$200</td>
+                        <td style="padding: 15px;">+$3.50/mile after 25mi</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 15px;">Hazmat/Special</td>
+                        <td style="padding: 15px;">Varies</td>
+                        <td style="padding: 15px;">Custom Quote</td>
+                        <td style="padding: 15px;">Licensing fees apply</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p style="color: var(--text-light); margin-top: 20px; font-size: 0.9rem;">
+            <strong>Note:</strong> Pricing is subject to pickup/delivery location accessibility, item specifications,
+            and current demand.
+            Please contact us for a detailed quote. Volume discounts available for regular customers.
+        </p>
+    </div>
+</section>
+
+<!-- CTA -->
+<section
+    style="background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); color: white; padding: 60px 0; text-align: center;">
+    <div class="container">
+        <h2 style="margin-bottom: 15px;">Ready to Use Our Services?</h2>
+        <p style="font-size: 1.1rem; margin-bottom: 25px;">Follow the simple process and get your delivery scheduled
+            today</p>
+        <a href="{% url 'app:contact' %}" class="btn btn-light"
+            style="color: var(--primary-color); font-weight: 600;">Request a Delivery</a>
+    </div>
+</section>
+
+{% endblock %}

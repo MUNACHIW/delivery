@@ -1,0 +1,198 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="hero" style="padding: 40px 0;">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1>{{ about_title }}</h1>
+                <p>Delivering care and compassion since our founding</p>
+            </div>
+            <div class="col-lg-6">
+                <img src="{% static 'hero2.jpg' %}" alt="About Us" class="img-fluid rounded-3">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Content -->
+<section>
+    <div class="container">
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6 mb-4">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=900&h=600&fit=crop"
+                    alt="Our Mission" class="img-fluid rounded-3">
+            </div>
+            <div class="col-lg-6">
+                <h2 style="margin-bottom: 20px;">Our Mission</h2>
+                <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 15px;">
+                    The American Red Cross Delivery Service is committed to providing fast, reliable, and compassionate
+                    delivery solutions
+                    to support communities in need. We combine decades of humanitarian expertise with modern logistics
+                    technology to ensure
+                    critical supplies and medical products reach their destinations safely and on time.
+                </p>
+                <p style="color: var(--text-light); line-height: 1.8;">
+                    Our team of trained professionals works around the clock to deliver emergency relief, medical
+                    equipment, blood products,
+                    and other essential items that save lives and support disaster recovery efforts.
+                </p>
+            </div>
+        </div>
+
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6 order-lg-2 mb-4">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=900&h=600&fit=crop"
+                    alt="Our Values" class="img-fluid rounded-3">
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <h2 style="margin-bottom: 20px;">Our Values</h2>
+                <div style="margin-bottom: 25px;">
+                    <h5 style="color: var(--primary-color);"><i class="fas fa-heart"></i> Compassion</h5>
+                    <p style="color: var(--text-light);">We care deeply about serving those in need and approach every
+                        delivery with empathy and dedication.</p>
+                </div>
+                <div style="margin-bottom: 25px;">
+                    <h5 style="color: var(--primary-color);"><i class="fas fa-shield-check"></i> Reliability</h5>
+                    <p style="color: var(--text-light);">Our clients depend on us to deliver when it matters most. We
+                        take that responsibility seriously.</p>
+                </div>
+                <div style="margin-bottom: 25px;">
+                    <h5 style="color: var(--primary-color);"><i class="fas fa-lightbulb"></i> Innovation</h5>
+                    <p style="color: var(--text-light);">We continuously invest in technology and training to improve
+                        our services and efficiency.</p>
+                </div>
+                <div>
+                    <h5 style="color: var(--primary-color);"><i class="fas fa-users"></i> Community</h5>
+                    <p style="color: var(--text-light);">We work collaboratively with partners and stakeholders to make
+                        a greater impact.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section class="bg-light">
+    <div class="container">
+        <h2 class="section-title">Our Leadership Team</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div
+                    style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.08); text-align: center;">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop"
+                        alt="Executive" style="width: 100%; height: 250px; object-fit: cover;">
+                    <div style="padding: 25px;">
+                        <h5 style="margin-bottom: 5px;">James Wilson</h5>
+                        <p style="color: var(--primary-color); font-weight: 600; margin-bottom: 10px;">Executive
+                            Director</p>
+                        <p style="color: var(--text-light); font-size: 0.9rem;">20+ years of humanitarian logistics
+                            experience</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div
+                    style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.08); text-align: center;">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&h=500&fit=crop"
+                        alt="Executive" style="width: 100%; height: 250px; object-fit: cover;">
+                    <div style="padding: 25px;">
+                        <h5 style="margin-bottom: 5px;">Maria Garcia</h5>
+                        <p style="color: var(--primary-color); font-weight: 600; margin-bottom: 10px;">Operations
+                            Manager</p>
+                        <p style="color: var(--text-light); font-size: 0.9rem;">Expert in logistics and supply chain
+                            management</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div
+                    style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.08); text-align: center;">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&h=500&fit=crop"
+                        alt="Executive" style="width: 100%; height: 250px; object-fit: cover;">
+                    <div style="padding: 25px;">
+                        <h5 style="margin-bottom: 5px;">David Chen</h5>
+                        <p style="color: var(--primary-color); font-weight: 600; margin-bottom: 10px;">Technology
+                            Director</p>
+                        <p style="color: var(--text-light); font-size: 0.9rem;">Leader in delivery tracking and
+                            logistics technology</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Timeline Section -->
+<section>
+    <div class="container">
+        <h2 class="section-title">Our Journey</h2>
+        <div style="max-width: 800px; margin: 0 auto;">
+            <div
+                style="padding-left: 40px; border-left: 3px solid var(--primary-color); position: relative; margin-bottom: 30px;">
+                <div
+                    style="position: absolute; left: -16px; top: 0; width: 30px; height: 30px; background-color: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700;">
+                    1</div>
+                <h5 style="margin-bottom: 10px;">1881 - Founded</h5>
+                <p style="color: var(--text-light);">American Red Cross established to provide humanitarian services to
+                    communities in need.</p>
+            </div>
+            <div
+                style="padding-left: 40px; border-left: 3px solid var(--primary-color); position: relative; margin-bottom: 30px;">
+                <div
+                    style="position: absolute; left: -16px; top: 0; width: 30px; height: 30px; background-color: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700;">
+                    2</div>
+                <h5 style="margin-bottom: 10px;">2005 - Blood Services</h5>
+                <p style="color: var(--text-light);">Expanded to include temperature-controlled blood product
+                    transportation.</p>
+            </div>
+            <div
+                style="padding-left: 40px; border-left: 3px solid var(--primary-color); position: relative; margin-bottom: 30px;">
+                <div
+                    style="position: absolute; left: -16px; top: 0; width: 30px; height: 30px; background-color: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700;">
+                    3</div>
+                <h5 style="margin-bottom: 10px;">2015 - Disaster Relief</h5>
+                <p style="color: var(--text-light);">Launched comprehensive disaster relief and emergency response
+                    delivery network.</p>
+            </div>
+            <div style="padding-left: 40px; border-left: 3px solid var(--primary-color); position: relative;">
+                <div
+                    style="position: absolute; left: -16px; top: 0; width: 30px; height: 30px; background-color: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700;">
+                    4</div>
+                <h5 style="margin-bottom: 10px;">2024 - Innovation & Growth</h5>
+                <p style="color: var(--text-light);">Deployed AI-powered tracking and expanded service to 25+ cities
+                    nationwide.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="bg-light">
+    <div class="container">
+        <h2 class="section-title">Our Impact</h2>
+        <div class="row text-center">
+            <div class="col-md-3 mb-4">
+                <h2 style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 10px;">5,000+</h2>
+                <p style="color: var(--text-light); font-size: 1.1rem;">Deliveries Completed</p>
+            </div>
+            <div class="col-md-3 mb-4">
+                <h2 style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 10px;">50+</h2>
+                <p style="color: var(--text-light); font-size: 1.1rem;">Staff Members</p>
+            </div>
+            <div class="col-md-3 mb-4">
+                <h2 style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 10px;">100K+</h2>
+                <p style="color: var(--text-light); font-size: 1.1rem;">Lives Impacted</p>
+            </div>
+            <div class="col-md-3 mb-4">
+                <h2 style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 10px;">24/7</h2>
+                <p style="color: var(--text-light); font-size: 1.1rem;">Customer Support</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

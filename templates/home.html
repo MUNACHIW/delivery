@@ -1,0 +1,268 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1>{{ hero_title }}</h1>
+                <p>{{ hero_subtitle }}</p>
+                <div class="d-flex gap-3">
+                    <a href="{% url 'app:contact' %}" class="btn btn-primary btn-lg">Request Delivery</a>
+                    <a href="{% url 'app:how_it_works' %}" class="btn btn-outline-primary btn-lg">Learn More</a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <img src="{% static 'hero1.jpg' %}" alt="Delivery Services" class="img-fluid rounded-3"
+                    style="box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="bg-light">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-4 mb-4">
+                <h2 style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 10px;">
+                    <i class="fas fa-truck"></i> 5,000+
+                </h2>
+                <p style="color: var(--text-light); font-size: 1.1rem;">Successful Deliveries</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h2 style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 10px;">
+                    <i class="fas fa-users"></i> 50+
+                </h2>
+                <p style="color: var(--text-light); font-size: 1.1rem;">Dedicated Staff</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h2 style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 10px;">
+                    <i class="fas fa-globe"></i> 25+
+                </h2>
+                <p style="color: var(--text-light); font-size: 1.1rem;">Cities Served</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Services -->
+<section>
+    <div class="container">
+        <h2 class="section-title">Our Services</h2>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+                    <i class="fas fa-bolt"></i>
+                    <h5>Express Delivery</h5>
+                    <p>Same-day delivery for urgent needs across urban areas.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+                    <i class="fas fa-snowflake"></i>
+                    <h5>Temperature Controlled</h5>
+                    <p>Specialized handling for sensitive medical and blood products.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+                    <i class="fas fa-map-location-dot"></i>
+                    <h5>Real-time Tracking</h5>
+                    <p>Monitor your delivery every step of the way with GPS tracking.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h5>Emergency Relief</h5>
+                    <p>Rapid response and delivery of emergency supplies to affected areas.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+                    <i class="fas fa-shield-heart"></i>
+                    <h5>Fully Insured</h5>
+                    <p>Complete protection and insurance coverage for all shipments.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+                    <i class="fas fa-headset"></i>
+                    <h5>24/7 Support</h5>
+                    <p>Round-the-clock customer service and support for all your needs.</p>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <a href="{% url 'app:services' %}" class="btn btn-primary btn-lg">Explore All Services</a>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="bg-light">
+    <div class="container">
+        <h2 class="section-title">Why Choose Red Cross Delivery</h2>
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4">
+                <img src="{% static 'hero2.jpg' %}" alt="Why Choose Us" class="img-fluid rounded-3">
+            </div>
+            <div class="col-lg-6">
+                <div style="margin-bottom: 25px;">
+                    <h5 style="color: var(--primary-color); font-size: 1.2rem;"><i class="fas fa-check-circle"></i>
+                        Trusted Organization</h5>
+                    <p style="color: var(--text-light);">Part of the American Red Cross, a trusted leader in
+                        humanitarian services for over 150 years.</p>
+                </div>
+                <div style="margin-bottom: 25px;">
+                    <h5 style="color: var(--primary-color); font-size: 1.2rem;"><i class="fas fa-check-circle"></i>
+                        Professional Network</h5>
+                    <p style="color: var(--text-light);">Trained and certified delivery professionals ensuring quality
+                        service in every delivery.</p>
+                </div>
+                <div style="margin-bottom: 25px;">
+                    <h5 style="color: var(--primary-color); font-size: 1.2rem;"><i class="fas fa-check-circle"></i>
+                        Technology-Driven</h5>
+                    <p style="color: var(--text-light);">Advanced tracking, communication, and logistics systems for
+                        seamless operations.</p>
+                </div>
+                <div style="margin-bottom: 25px;">
+                    <h5 style="color: var(--primary-color); font-size: 1.2rem;"><i class="fas fa-check-circle"></i>
+                        Community Focused</h5>
+                    <p style="color: var(--text-light);">Dedicated to supporting communities in need with compassionate
+                        and efficient service.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section>
+    <div class="container">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <div style="margin-bottom: 15px;">
+                        <i class="fas fa-star" style="color: #FFC107;"></i>
+                        <i class="fas fa-star" style="color: #FFC107;"></i>
+                        <i class="fas fa-star" style="color: #FFC107;"></i>
+                        <i class="fas fa-star" style="color: #FFC107;"></i>
+                        <i class="fas fa-star" style="color: #FFC107;"></i>
+                    </div>
+                    <p>"The delivery service was exceptional. Our emergency medical supplies arrived within hours.
+                        Highly professional team!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=faces"
+                            alt="Client" style="width: 50px; height: 50px; object-fit: cover; border-radius: 50%;">
+                        <div class="testimonial-meta">
+                            <h6>John Mitchell</h6>
+                            <p>Hospital Administrator</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <div style="margin-bottom: 15px;">
+                        <i class="fas fa-star" style="color: #FFC107;"></i>
+                        <i class="fas fa-star" style="color: #FFC107;"></i>
+                        <i class="fas fa-star" style="color: #FFC107;"></i>
+                        <i class="fas fa-star" style="color: #FFC107;"></i>
+                        <i class="fas fa-star" style="color: #FFC107;"></i>
+                    </div>
+                    <p>"We've been using Red Cross Delivery for our blood supply transport for over a year. They never
+                        fail us!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=faces"
+                            alt="Client" style="width: 50px; height: 50px; object-fit: cover; border-radius: 50%;">
+                        <div class="testimonial-meta">
+                            <h6>Sarah Thompson</h6>
+                            <p>Blood Bank Director</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <div style="margin-bottom: 15px;">
+                        <i class="fas fa-star" style="color: #FFC107;"></i>
+                        <i class="fas fa-star" style="color: #FFC107;"></i>
+                        <i class="fas fa-star" style="color: #FFC107;"></i>
+                        <i class="fas fa-star" style="color: #FFC107;"></i>
+                        <i class="fas fa-star" style="color: #FFC107;"></i>
+                    </div>
+                    <p>"During the disaster relief, their team moved mountains to get supplies to affected areas.
+                        Amazing work!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&fit=crop&crop=faces"
+                            alt="Client" style="width: 50px; height: 50px; object-fit: cover; border-radius: 50%;">
+                        <div class="testimonial-meta">
+                            <h6>Michael Rodriguez</h6>
+                            <p>Disaster Relief Coordinator</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Process Steps -->
+<section class="bg-light">
+    <div class="container">
+        <h2 class="section-title">Simple 4-Step Process</h2>
+        <div class="row">
+            <div class="col-md-3 text-center mb-4">
+                <div
+                    style="background-color: var(--primary-color); color: white; width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; font-weight: 700; margin: 0 auto 20px;">
+                    1</div>
+                <h5>Request</h5>
+                <p style="color: var(--text-light);">Submit your delivery request online or by phone</p>
+            </div>
+            <div class="col-md-3 text-center mb-4">
+                <div
+                    style="background-color: var(--primary-color); color: white; width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; font-weight: 700; margin: 0 auto 20px;">
+                    2</div>
+                <h5>Confirm</h5>
+                <p style="color: var(--text-light);">We confirm your order and prepare items carefully</p>
+            </div>
+            <div class="col-md-3 text-center mb-4">
+                <div
+                    style="background-color: var(--primary-color); color: white; width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; font-weight: 700; margin: 0 auto 20px;">
+                    3</div>
+                <h5>Track</h5>
+                <p style="color: var(--text-light);">Monitor real-time location of your delivery</p>
+            </div>
+            <div class="col-md-3 text-center mb-4">
+                <div
+                    style="background-color: var(--primary-color); color: white; width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; font-weight: 700; margin: 0 auto 20px;">
+                    4</div>
+                <h5>Deliver</h5>
+                <p style="color: var(--text-light);">Items arrive safely with professional service</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section
+    style="background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); color: white; padding: 80px 0; text-align: center;">
+    <div class="container">
+        <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Ready to Get Started?</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 30px;">Join thousands of satisfied clients who trust us with their
+            deliveries.</p>
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+            <a href="{% url 'app:contact' %}" class="btn btn-light btn-lg"
+                style="color: var(--primary-color); font-weight: 600;">Request a Delivery</a>
+            <a href="{% url 'app:about' %}" class="btn btn-outline-light btn-lg">Learn More About Us</a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
