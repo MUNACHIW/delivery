@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="hero" style="padding: 40px 0;">
+    <div class="container">
+        <h1>Request a Delivery</h1>
+        <p>Fill in the details below and we'll take it from there</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <form method="post" class="bg-white p-5 rounded-3 shadow-sm">
+                    {% csrf_token %}
+
+                    <div class="mb-4">
+                        <label class="form-label">Service Type *</label>
+                        {{ form.service_type }}
+                    </div>
+
+                    <h5 style="color: var(--primary-color); margin: 30px 0 15px;">Pickup Details</h5>
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <label class="form-label">Sender Name *</label>
+                            {{ form.sender_name }}
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Sender Phone *</label>
+                            {{ form.sender_phone }}
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label">Pickup Address *</label>
+                        {{ form.pickup_address }}
+                    </div>
+
+                    <h5 style="color: var(--primary-color); margin: 30px 0 15px;">Delivery Details</h5>
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <label class="form-label">Recipient Name *</label>
+                            {{ form.recipient_name }}
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Recipient Phone *</label>
+                            {{ form.recipient_phone }}
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label">Delivery Address *</label>
+                        {{ form.delivery_address }}
+                    </div>
+
+                    <h5 style="color: var(--primary-color); margin: 30px 0 15px;">Package Details</h5>
+                    <div class="row mb-4">
+                        <div class="col-md-8">
+                            <label class="form-label">Item Description *</label>
+                            {{ form.item_description }}
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Weight (kg)</label>
+                            {{ form.weight_kg }}
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label">Special Instructions</label>
+                        {{ form.special_instructions }}
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label">Preferred Date</label>
+                        {{ form.preferred_date }}
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-lg w-100">Submit Delivery Request</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

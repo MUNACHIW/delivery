@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-0h36qrkne2hkrv0@i+wry1#)d2l1=ldbyz-9as=tmf5a*!80-+"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -39,8 +39,12 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "app",
-  
+    "accounts",
+    "shipping",
 ]
+
+
+
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -124,6 +128,14 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
+
+
+AUTH_USER_MODEL = "accounts.User"
+
+
+LOGIN_URL = "accounts:login"
+LOGIN_REDIRECT_URL = "shipping:dashboard"
+LOGOUT_REDIRECT_URL = "app:home"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field

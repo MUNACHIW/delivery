@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="hero" style="padding: 40px 0;">
+    <div class="container">
+        <h1>Shipment {{ shipment.tracking_number }}</h1>
+        <p>{{ shipment.get_service_type_display }} &bull; Status: {{ shipment.get_status_display }}</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.08);">
+                    <h4 style="margin-bottom: 20px; color: var(--primary-color);">Sender</h4>
+                    <p><strong>{{ shipment.sender_name }}</strong></p>
+                    <p style="color: var(--text-light);">{{ shipment.sender_phone }}</p>
+                    <p style="color: var(--text-light);">{{ shipment.pickup_address }}</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.08);">
+                    <h4 style="margin-bottom: 20px; color: var(--primary-color);">Recipient</h4>
+                    <p><strong>{{ shipment.recipient_name }}</strong></p>
+                    <p style="color: var(--text-light);">{{ shipment.recipient_phone }}</p>
+                    <p style="color: var(--text-light);">{{ shipment.delivery_address }}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-12">
+                <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.08);">
+                    <h4 style="margin-bottom: 20px; color: var(--primary-color);">Package Details</h4>
+                    <p><strong>Item:</strong> {{ shipment.item_description }}</p>
+                    {% if shipment.weight_kg %}<p><strong>Weight:</strong> {{ shipment.weight_kg }} kg</p>{% endif %}
+                    {% if shipment.special_instructions %}<p><strong>Instructions:</strong> {{ shipment.special_instructions }}</p>{% endif %}
+                    {% if shipment.assigned_driver %}<p><strong>Driver:</strong> {{ shipment.assigned_driver }}</p>{% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-light">
+    <div class="container">
+        <h2 class="section-title">Tracking History</h2>
+        <div style="max-width: 700px; margin: 0 auto;">
+            {% for event in shipment.events.all %}
+            <div style="padding-left: 40px; border-left: 3px solid var(--primary-color); position: relative; margin-bottom: 30px;">
+                <div style="position: absolute; left: -16px; top: 0; width: 30px; height: 30px; background-color: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;">
+                    <i class="fas fa-truck" style="font-size: 0.8rem;"></i>
+                </div>
+                <h5 style="margin-bottom: 5px;">{{ event.get_status_display }}</h5>
+                <p style="color: var(--text-light); margin-bottom: 0;">{{ event.timestamp|date:"M d, Y - g:i A" }}{% if event.location %} &bull; {{ event.location }}{% endif %}</p>
+                {% if event.note %}<p style="color: var(--text-light); margin-bottom: 0;">{{ event.note }}</p>{% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

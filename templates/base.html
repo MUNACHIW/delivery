@@ -560,13 +560,29 @@
                             href="{% url 'app:how_it_works' %}">How It Works</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.resolver_match.url_name == 'blog' %}active{% endif %}"
-                            href="{% url 'app:blog' %}">Blog</a>
+                        <a class="nav-link {% if request.resolver_match.url_name == 'track_shipment' %}active{% endif %}"
+                            href="{% url 'shipping:track_shipment' %}">Track</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.resolver_match.url_name == 'faq' %}active{% endif %}"
                             href="{% url 'app:faq' %}">FAQ</a>
                     </li>
+                    {% if request.user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.resolver_match.url_name == 'dashboard' %}active{% endif %}"
+                            href="{% url 'shipping:dashboard' %}">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'accounts:logout' %}">Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'accounts:login' %}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'accounts:register' %}">Register</a>
+                    </li>
+                    {% endif %}
                     <li class="nav-item">
                         <a class="nav-link btn btn-primary text-white" href="{% url 'app:contact' %}">Contact</a>
                     </li>
