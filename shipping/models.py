@@ -5,6 +5,7 @@ import random
 import string
 from django.conf import settings
 from django.urls import reverse
+from .utils import geocode_address
 
 
 def generate_tracking_number():
@@ -56,10 +57,14 @@ class Shipment(models.Model):
     sender_name = models.CharField(max_length=150)
     sender_phone = models.CharField(max_length=20)
     pickup_address = models.TextField()
+    pickup_latitude = models.DecimalField(max_digits=10, decimal_places=7, blank=True, null=True)
+    pickup_longitude = models.DecimalField(max_digits=10, decimal_places=7, blank=True, null=True)
 
     recipient_name = models.CharField(max_length=150)
     recipient_phone = models.CharField(max_length=20)
     delivery_address = models.TextField()
+    delivery_latitude = models.DecimalField(max_digits=10, decimal_places=7, blank=True, null=True)
+    delivery_longitude = models.DecimalField(max_digits=10, decimal_places=7, blank=True, null=True)
 
     item_description = models.CharField(max_length=255)
     weight_kg = models.DecimalField(max_digits=6, decimal_places=2, blank=True, null=True)
@@ -86,6 +91,15 @@ class Shipment(models.Model):
         old_status = None
         if not is_new:
             old_status = Shipment.objects.filter(pk=self.pk).values_list("status", flat=True).first()
+
+        # Auto-geocode addresses that don't have coordinates yet
+        if self.pickup_address and (self.pickup_latitude is None or self.pickup_longitude is None):
+            lat, lng = geocode_address(self.pickup_address)
+            self.pickup_latitude, self.pickup_longitude = lat, lng
+
+        if self.delivery_address and (self.delivery_latitude is None or self.delivery_longitude is None):
+            lat, lng = geocode_address(self.delivery_address)
+            self.delivery_latitude, self.delivery_longitude = lat, lng
 
         super().save(*args, **kwargs)
 

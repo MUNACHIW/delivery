@@ -43,6 +43,12 @@ INSTALLED_APPS = [
     "shipping",
 ]
 
+UNFOLD = {
+    "SITE_TITLE": "American_redcross Admin",
+    "SITE_HEADER": "Dashboard",
+    "THEME": "light",  # or "dark"
+    "SHOW_COUNTS": True,  # show object counts in sidebar
+}
 
 
 

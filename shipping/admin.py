@@ -26,10 +26,12 @@ class ShipmentAdmin(admin.ModelAdmin):
         ("Tracking", {"fields": ("tracking_number", "customer", "service_type", "status", "assigned_driver")}),
         ("Sender", {"fields": ("sender_name", "sender_phone", "pickup_address")}),
         ("Recipient", {"fields": ("recipient_name", "recipient_phone", "delivery_address")}),
+        ("Location (auto-geocoded, editable)", {
+            "fields": (("pickup_latitude", "pickup_longitude"), ("delivery_latitude", "delivery_longitude"))
+        }),
         ("Package", {"fields": ("item_description", "weight_kg", "special_instructions", "preferred_date", "estimated_cost")}),
         ("Timestamps", {"fields": ("created_at", "updated_at")}),
     )
-
     def _bulk_update_status(self, request, queryset, status, label):
         for shipment in queryset:
             shipment.status = status
